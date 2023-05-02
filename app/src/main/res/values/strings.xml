@@ -5,4 +5,5 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="name">Your name</string>
+    <string name="greeting">Get the best coffee in town</string>
 </resources>
