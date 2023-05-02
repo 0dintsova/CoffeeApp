@@ -26,8 +26,9 @@ class MainActivity : AppCompatActivity() {
 
     }
     private fun onInfinitePageChangeCallback(listSize: Int) {
+        // фиксирование изменений viewPager
         vp.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
-
+            // Изменение состояния при прокрутке
             override fun onPageScrollStateChanged(state: Int) {
                 super.onPageScrollStateChanged(state)
 
