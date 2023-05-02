@@ -19,9 +19,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         vp = binding.viewPager2 // Находит viewPager
-        vp.currentItem = 3
         vp.adapter = VPAdapter(images)
-
+        vp.currentItem = 1
         onInfinitePageChangeCallback(images.size + 2)
 
     }
@@ -34,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 
                 if (state == ViewPager2.SCROLL_STATE_IDLE) {
                     when (vp.currentItem) {
-                        listSize - 1 -> vp.setCurrentItem(0, false)
+                        listSize - 1 -> vp.setCurrentItem(1, false)
                         0 -> vp.setCurrentItem(listSize - 2, false)
                     }
                 }
@@ -43,7 +42,7 @@ class MainActivity : AppCompatActivity() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
                 if (position != 0 && position != listSize - 1) {
-                    // pageIndicatorView.setSelected(position-1)
+                     //vp.isSelected = position - 1
                 }
             }
         })

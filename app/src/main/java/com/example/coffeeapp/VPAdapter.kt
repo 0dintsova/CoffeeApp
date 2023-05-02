@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class VPAdapter(arrayOfImages: Array<Int>) : RecyclerView.Adapter<VPAdapter.ViewHolder>() {
 
-    val images = listOf(arrayOfImages.last()) + arrayOfImages + listOf(arrayOfImages.first())
+    val images = arrayOf( arrayOfImages.last()) + arrayOfImages + arrayOf( arrayOfImages.first())
 
 
     class ViewHolder(item : View): RecyclerView.ViewHolder(item) {
